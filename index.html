@@ -3,165 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HeetDevLab Blog</title>
 
-<meta name="description" content="HeetDevLab Blog - Cybersecurity, Android app development and indie dev insights.">
+<title>Cybersecurity & Android Development Blog | HeetDevLab</title>
+
+<meta name="description" content="Insights on cybersecurity, Android app development and indie building by HeetDevLab. Learn privacy-first development and security best practices.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="HeetDevLab">
 
 <link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="style.css">
-<style>
-/* ================= RESET ================= */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family:'Segoe UI', Arial, sans-serif;
-  background:#030a2b;
-  color:white;
-  overflow-x:hidden;
-  text-align:center;
-  position:relative;
-}
-
-/* ================= BACKGROUND ================= */
-
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:
-  radial-gradient(circle at 20% 20%, rgba(0,140,255,0.18), transparent 60%),
-  radial-gradient(circle at 80% 80%, rgba(0,140,255,0.12), transparent 60%);
-  animation: glowMove 12s ease-in-out infinite alternate;
-  z-index:-1;
-}
-
-@keyframes glowMove{
-  0%{transform:scale(1);}
-  100%{transform:scale(1.05);}
-}
-
-#particles-js{
-  position:fixed;
-  inset:0;
-  z-index:-2;
-}
-
-
-.blog-container{
-  max-width:900px;
-  margin:80px auto;
-  padding:20px;
-}
-
-.blog-container h1{
-  text-align:center;
-  font-size:36px;
-  margin-bottom:20px;
-}
-
-.blog-intro{
-  text-align:center;
-  opacity:0.8;
-  margin-bottom:50px;
-}
-
-.blog-card{
-  background:rgba(255,255,255,0.05);
-  padding:25px;
-  border-radius:12px;
-  margin-bottom:25px;
-  transition:0.3s;
-}
-
-.blog-card:hover{
-  background:rgba(255,255,255,0.1);
-  transform:translateY(-5px);
-}
-
-.blog-card h3{
-  margin:0 0 10px 0;
-}
-
-.blog-card a{
-  color:#00ffcc;
-  text-decoration:none;
-}
-
-.blog-card p{
-  opacity:0.85;
-  font-size:14px;
-}
-
-footer{
-  text-align:center;
-  padding:40px;
-  opacity:0.6;
-  font-size:14px;
-}
-</style>
+<link rel="icon" type="image/png" href="../favicon.png">
 
 </head>
-<body>
-<div id="particles-js"></div>
-  
-<nav class="navbar">
- <div class="nav-overlay" id="navOverlay"></div>
-  <div class="nav-container">
 
+<body>
+
+<div id="particles-js"></div>
+
+<nav class="navbar">
+  <div class="nav-container">
     <div class="nav-brand">
       <a href="/">HeetDevLab</a>
     </div>
 
-   <div class="hamburger" id="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-   </div>
-    <div class="nav-links" id="navLinks">
-    <a href="https://heetdevlab.github.io">Home</a>
-<a href="https://heetdevlab.github.io/Sentinex/">Sentinex</a>
-<a href="https://heetdevlab.github.io/Blog/">Blog</a>
-<a href="https://heetdevlab.github.io/Webtools/">
-  WebTools <span style="color:#00ff88;font-size:10px;">NEW</span>
-</a>
-<a href="https://youtube.com/@heetplayscode" target="_blank">YouTube</a>
+    <div class="hamburger" id="hamburger">
+      ☰
     </div>
-<div class="nav-overlay" id="navOverlay"></div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/Sentinex/">Sentinex</a>
+      <a href="/Webtools/">WebTools</a>
+      <a href="/Blog/">Blog</a>
+    </div>
   </div>
 </nav>
-<div class="blog-container">
 
-<h1>HeetDevLab Blog</h1>
-<p class="blog-intro">
-Insights on cybersecurity, Android app development and indie building.
-</p>
+<div class="container">
 
-<div class="blog-card">
-  <h3><a href="#">How Sentinex App Lock Works</a></h3>
-  <p>Deep dive into Android app locking system and privacy protection logic.</p>
-</div>
+<!-- HERO -->
+<section class="blog-hero">
+  <h1>HeetDevLab Blog</h1>
+  <p>Insights on cybersecurity, Android development & indie building.</p>
+</section>
 
-<div class="blog-card">
-  <h3><a href="#">Building Secure Android Apps</a></h3>
-  <p>Best practices to improve privacy and security in Android applications.</p>
-</div>
+<!-- BLOG GRID -->
+<section class="blog-grid">
 
-<div class="blog-card">
-  <h3><a href="#">My Journey as Indie Developer</a></h3>
-  <p>Lessons learned while building HeetDevLab and Sentinex from scratch.</p>
-</div>
+  <a href="how-sentinex-works.html" class="blog-card">
+    <h2>How Sentinex App Lock Works</h2>
+    <p>Deep dive into Android app locking system and privacy-first protection logic.</p>
+    <span class="read-more">Read Article →</span>
+  </a>
 
-</div>
+  <a href="building-secure-android-apps.html" class="blog-card">
+    <h2>Building Secure Android Apps</h2>
+    <p>Best practices to improve privacy and security in Android applications.</p>
+    <span class="read-more">Read Article →</span>
+  </a>
+
+  <a href="indie-developer-journey.html" class="blog-card">
+    <h2>My Journey as Indie Developer</h2>
+    <p>Lessons learned while building HeetDevLab and Sentinex from scratch.</p>
+    <span class="read-more">Read Article →</span>
+  </a>
+
+</section>
 
 <footer>
-© HeetDevLab — Cybersecurity & Indie Development
+  © 2026 HeetDevLab — Privacy First Development
 </footer>
+
+</div>
+
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="particles.js"></script>
+<script src="../script.js"></script>
+
 </body>
 </html>
