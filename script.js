@@ -1,2 +1,5 @@
-const menu=document.getElementById('menu'),links=document.getElementById('links');menu?.addEventListener('click',()=>links.classList.toggle('open'));links?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const menu=document.getElementById('hamburger')||document.getElementById('menu');
+const links=document.getElementById('navLinks')||document.getElementById('links');
+menu?.addEventListener('click',()=>links?.classList.toggle('open'));
+links?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
 if(window.particlesJS){particlesJS('particles-js',{particles:{number:{value:32,density:{enable:true,value_area:900}},color:{value:'#168dff'},opacity:{value:.28,random:true},size:{value:2,random:true},line_linked:{enable:true,distance:145,color:'#168dff',opacity:.12,width:1},move:{enable:true,speed:.55,direction:'none',random:false,out_mode:'out'}},interactivity:{detect_on:'canvas',events:{onhover:{enable:false},onclick:{enable:false}},modes:{}},retina_detect:true});}
