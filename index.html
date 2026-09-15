@@ -5,9 +5,90 @@
 <title>HeetDevLab Blog | Android, Cybersecurity & Indie Building</title>
 <meta name="description" content="HeetDevLab articles about Android security, privacy-first development, cybersecurity and indie building.">
 <link rel="icon" href="../favicon.png"><link rel="stylesheet" href="style.css">
+  <style>
+  /* ===== HeetDevLab UNIVERSAL MOBILE NAV FIX ===== */
+.navbar{z-index:5000!important;}
+.nav-container{position:relative;z-index:5002!important;}
+.hamburger{
+  position:relative!important;
+  width:36px!important;
+  height:36px!important;
+  display:none;
+  flex:0 0 36px;
+  align-items:center!important;
+  justify-content:center!important;
+  flex-direction:column!important;
+  gap:0!important;
+  cursor:pointer;
+  z-index:5005!important;
+  -webkit-tap-highlight-color:transparent;
+}
+.hamburger span{
+  position:absolute!important;
+  left:5px!important;
+  width:26px!important;
+  height:3px!important;
+  margin:0!important;
+  display:block!important;
+  background:#fff!important;
+  border-radius:99px!important;
+  transform-origin:center!important;
+  transition:transform .25s ease,opacity .2s ease,top .25s ease!important;
+}
+.hamburger span:nth-child(1){top:9px!important;}
+.hamburger span:nth-child(2){top:16.5px!important;}
+.hamburger span:nth-child(3){top:24px!important;}
+.hamburger.active span:nth-child(1){top:16.5px!important;transform:rotate(45deg)!important;}
+.hamburger.active span:nth-child(2){opacity:0!important;transform:scaleX(0)!important;}
+.hamburger.active span:nth-child(3){top:16.5px!important;transform:rotate(-45deg)!important;}
+.nav-overlay{z-index:4998!important;}
+.nav-links{z-index:5001!important;}
+@media(max-width:768px){
+  .hamburger{display:flex!important;}
+  .nav-links{z-index:5001!important;}
+}
+    /* ===== Premium HeetDevLab Navbar Branding ===== */
+.nav-brand{display:flex!important;align-items:center!important;}
+.nav-brand>a{display:inline-flex!important;align-items:center!important;gap:9px!important;text-decoration:none!important;line-height:1!important;}
+.brand-mark{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid rgba(24,215,232,.38);border-radius:9px;background:linear-gradient(135deg,rgba(24,215,232,.14),rgba(22,89,255,.10));box-shadow:0 0 18px rgba(24,215,232,.10),inset 0 0 14px rgba(24,215,232,.05);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:800;letter-spacing:-1px;color:#18d7e8;}
+.brand-name{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;font-size:25px!important;font-weight:800!important;letter-spacing:-1.15px!important;color:#f4f8ff!important;text-shadow:0 0 22px rgba(24,215,232,.08);}
+.brand-name span{background:linear-gradient(90deg,#18d7e8,#5ee7ff);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.brand-name b{color:#18d7e8;font-weight:900;text-shadow:0 0 12px rgba(24,215,232,.55);}
+@media(max-width:768px){
+ .nav-brand>a{gap:8px!important;}
+ .brand-mark{width:28px;height:28px;border-radius:8px;font-size:11px;}
+ .brand-name{font-size:23px!important;letter-spacing:-1px!important;}
+}
+  </style>
 </head><body>
 <div id="particles-js"></div>
-<nav class="navbar"><div class="nav-container"><a class="brand" href="/">HeetDevLab</a><button class="menu" id="menu" aria-label="Open menu"><span></span><span></span><span></span></button><div class="links" id="links"><a href="/">Home</a><a href="/Sentinex/">Sentinex</a><a class="active" href="/Blog/">Blog</a><a href="/Webtools/">WebTools <b>NEW</b></a><a href="https://youtube.com/@heetplayscode" target="_blank" rel="noopener">YouTube</a></div></div></nav>
+  <nav class="navbar">
+ <div class="nav-overlay" id="navOverlay"></div>
+  <div class="nav-container">
+
+    <div class="nav-brand">
+      <a href="/" aria-label="HeetDevLab Home">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span class="brand-name">Heet<span>Dev</span>Lab<b>.</b></span>
+      </a>
+    </div>
+
+   <div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+   </div>
+    <div class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/Sentinex/">Sentinex</a>
+      <a href="/Webtools/">WebTools</a>
+     <a href="/portfolio/">Portfolio</a>
+     <a href="/Blog/">Blog</a>
+      <a href="https://youtube.com/@heetplayscode" target="_blank">YouTube</a>
+    </div>
+
+  </div>
+  </nav>
 <main>
 <section class="hero"><div class="eyebrow">HEETDEVLAB / INSIGHTS</div><h1>Ideas behind the <span>build.</span></h1><p>Practical notes on Android security, privacy-first development and the journey of building products independently.</p><div class="hero-tags"><span>🔐 Cybersecurity</span><span>📱 Android</span><span>🚀 Indie Building</span></div></section>
 <section class="featured"><div class="featured-copy"><div class="label">FEATURED ARTICLE</div><h2>How Sentinex App Lock Works</h2><p>A look inside the protection model, Android APIs and privacy-first decisions behind Sentinex.</p><a class="btn" href="how-sentinex-works.html">Read the article <span>→</span></a></div><div class="featured-art"><div class="shield">S</div><div class="orbit o1"></div><div class="orbit o2"></div></div></section>
@@ -20,4 +101,35 @@
 <section class="cta"><h2>Want to see the projects behind the articles?</h2><p>Explore Sentinex or try the privacy-focused WebTools collection.</p><div><a class="btn" href="/Sentinex/">Explore Sentinex</a><a class="btn ghost" href="/Webtools/">Open WebTools</a></div></section>
 </main><footer><span>© 2026 HeetDevLab</span><span>Privacy First · Indie Built · Made in India 🇮🇳</span></footer>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script><script src="script.js"></script>
+<script>
+/* ===== HeetDevLab UNIVERSAL NAV SCRIPT ===== */
+(function(){
+  function initHeetNav(){
+    const hamburger=document.getElementById('hamburger');
+    const navLinks=document.getElementById('navLinks');
+    const overlay=document.getElementById('navOverlay');
+    if(!hamburger||!navLinks) return;
+    if(hamburger.dataset.navReady==='1') return;
+    hamburger.dataset.navReady='1';
+    function setOpen(open){
+      hamburger.classList.toggle('active',open);
+      navLinks.classList.toggle('active',open);
+      if(overlay) overlay.classList.toggle('active',open);
+      document.body.classList.toggle('nav-open',open);
+      hamburger.setAttribute('aria-expanded',String(open));
+      hamburger.setAttribute('aria-label',open?'Close menu':'Open menu');
+    }
+    hamburger.setAttribute('role','button');
+    hamburger.setAttribute('tabindex','0');
+    hamburger.setAttribute('aria-expanded','false');
+    hamburger.setAttribute('aria-label','Open menu');
+    hamburger.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();setOpen(!hamburger.classList.contains('active'));});
+    hamburger.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();setOpen(!hamburger.classList.contains('active'));}});
+    if(overlay) overlay.addEventListener('click',function(){setOpen(false);});
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
+    window.addEventListener('resize',()=>{if(window.innerWidth>768)setOpen(false);});
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initHeetNav); else initHeetNav();
+})();
+</script>
 </body></html>
